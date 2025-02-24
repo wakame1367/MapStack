@@ -12,3 +12,9 @@ variable "region" {
   type    = string
   default = "asia-northeast1"
 }
+
+variable "artifact_repo_id" {
+  type        = string
+  description = "Artifact RegistryリポジトリID"
+  default     = "titiler"
+}
