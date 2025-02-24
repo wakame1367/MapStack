@@ -26,3 +26,10 @@ resource "google_project_service" "service" {
   service            = each.value
   disable_on_destroy = false
 }
+
+module "artifact_registry" {
+  source        = "./modules/artifact_registry"
+  region        = var.region
+  repository_id = var.artifact_repo_id
+  description   = "Docker repository for TiTiler images"
+}
